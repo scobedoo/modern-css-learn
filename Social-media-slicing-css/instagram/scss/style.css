@@ -1,0 +1,154 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background: #ddd;
+}
+
+.header {
+  background: white;
+  color: #333;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 40px;
+  top: 0;
+}
+
+.header-content {
+  max-width: 930px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-content input {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .header-content input {
+    display: block;
+  }
+}
+
+.main-nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav > ul > li {
+  display: inline-block;
+}
+
+main {
+  max-width: 930px;
+  margin: 4rem auto;
+  border: 3px dashed red;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 70px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.user-info {
+  border: 3px dashed blue;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+}
+
+.user-info h1 {
+  margin: 0;
+}
+
+.user-info p {
+  grid-column: 1 / -1;
+}
+
+.user-info .user-stats {
+  grid-column: 1 / -1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 700px) {
+  .user-info {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .user-info p {
+    grid-column: auto;
+  }
+  .user-info .user-stats {
+    grid-column: auto;
+    grid-row: auto;
+    display: block;
+  }
+  .avatar {
+    width: 152px;
+    grid-row: 1 / -1;
+  }
+}
+
+.news-feed {
+  border: 3px dashed blue;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.news-feed img {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .news-feed {
+    grid-gap: 28px;
+  }
+}
+
+.feed-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.feed-nav a {
+  display: block;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

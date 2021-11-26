@@ -1,0 +1,80 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: 10px;
+  background: #3c5b9a;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.ball {
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ca5765;
+}
+
+.item-1 .ball {
+  animation: circle 1s infinite alternate;
+}
+
+@-webkit-keyframes circle {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes circle {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+.item-2 .ball {
+  animation: circle-two 3s infinite alternate;
+}
+
+@-webkit-keyframes circle-two {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    background: blue;
+  }
+  50% {
+    background: green;
+  }
+  70% {
+    background: yellow;
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes circle-two {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    background: blue;
+  }
+  50% {
+    background: green;
+  }
+  70% {
+    background: yellow;
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}

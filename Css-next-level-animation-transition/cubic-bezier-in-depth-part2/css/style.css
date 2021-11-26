@@ -1,0 +1,42 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: 10px;
+  background: #3c5b9a;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.ball {
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ca5765;
+}
+
+.item:hover .ball {
+  transform: translateX(300px);
+}
+
+.item-1 .ball {
+  transition: all 0.2s linear;
+}
+
+.item-2 .ball {
+  transition: all 1s ease;
+}
+
+.item-3 .ball {
+  transition: all 0.2s linear 0.5s;
+}
+
+.item-3:hover .ball {
+  transition: all 2s ease;
+}
+
+.item-4 .ball {
+  transition: all 0.5s cubic-bezier(0.41, 0, 0.19, 1);
+}
